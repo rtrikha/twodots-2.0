@@ -1,0 +1,116 @@
+$background: #0e0f10;
+$foreground: #ffffff;
+
+@mixin heading {
+	font-family: helvetica;
+	font-size: 60px;
+	font-weight: 600;
+	line-height: 54px;
+	letter-spacing: -2px;
+}
+
+@mixin sub-heading {
+	font-family: helvetica;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 25px;
+	letter-spacing: -0.5px;
+}
+
+@mixin body-big {
+	font-family: helvetica;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -0.1px;
+}
+
+@mixin projects-content {
+	cursor: pointer;
+	flex: 1 0 33%;
+	flex-grow: 0;
+	max-width: 33%;
+	margin-right: 4vw;
+	margin-bottom: 4vh;
+	.type {
+		width: fit-content;
+		font-size: 14px;
+		font-family: helvetica;
+		font-weight: bold;
+		color: $background;
+		background-color: $foreground;
+		padding: 4px;
+		transition: all 0.2s ease-in-out;
+	}
+	.heading {
+		margin-top: 2vh;
+		display: flex;
+		align-items: center;
+		@include sub-heading;
+		transition: all 0.2s ease-in-out;
+		img {
+			margin-right: 8px;
+		}
+	}
+	.content {
+		margin-top: 0.5vh;
+		@include body-big;
+		width: 80%;
+		transition: all 0.2s ease-in-out;
+	}
+	.view-project {
+		display: flex;
+		margin-top: 2vh;
+		font-size: 14px;
+		font-family: helvetica;
+		font-weight: bold;
+		opacity: 0.5;
+		transition: all 0.2s ease-in-out;
+	}
+	&:hover {
+		.type {
+			opacity: 0.5;
+			transition: all 0.2s ease-in-out;
+		}
+		.heading {
+			opacity: 0.5;
+			transition: all 0.2s ease-in-out;
+		}
+		.content {
+			opacity: 0.5;
+			transition: all 0.2s ease-in-out;
+		}
+		.view-project {
+			opacity: 1;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+}
+@font-face {
+	src: url(/resources/fonts/HelveticaNeue-LightItalic.ttf);
+	font-family: helvetica;
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	src: url(/resources/fonts/HelveticaNeue-Light.ttf);
+	font-family: helvetica;
+	font-weight: 200;
+}
+
+@font-face {
+	src: url(/resources/fonts/HelveticaNeue-Regular.ttf);
+	font-family: helvetica;
+	font-weight: 400;
+}
+@font-face {
+	src: url(/resources/fonts/Helvetica-Medium.ttf);
+	font-family: helvetica;
+	font-weight: 600;
+}
+@font-face {
+	src: url(/resources/fonts/HelveticaNeue-Bold.ttf);
+	font-family: helvetica;
+	font-weight: 800;
+}

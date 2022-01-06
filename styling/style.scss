@@ -1,3 +1,50 @@
+@import 'theme';
+
 body {
-	background-color: aqua;
+	background-color: $background;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	user-select: none;
+}
+
+.main-wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 80vw;
+	height: min-content;
+	color: $foreground;
+	.hero-wrapper {
+		margin-top: 10vh;
+		margin-bottom: 10vh;
+		@include heading;
+		.subheading {
+			@include body-big;
+			margin-top: 1vh;
+			width: 32vw;
+			opacity: 0.5;
+			&:hover {
+				//opacity: 0.4;
+				transition: all 0.4s ease-in-out;
+			}
+		}
+	}
+	.projects-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		.hygge {
+			@include projects-content;
+		}
+		.academid-planner {
+			@include projects-content;
+		}
+		.garden {
+			@include projects-content;
+		}
+	}
+	.footer-wrapper {
+		font-size: 12px;
+		font-family: helvetica;
+		font-weight: regular;
+		opacity: 0;
+	}
 }
